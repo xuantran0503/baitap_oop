@@ -25,7 +25,6 @@ class SoPhuc{
 		{
 			return pt;
 		}
-
 };
 
 int main(int argc, char *argv[])
@@ -40,7 +39,5 @@ int main(int argc, char *argv[])
 		<<a[0].getPT() + a[1].getPT()
 		<<" + "<<a[0].getPA() + a[1].getPA()
 		<<" *j"<<endl;
-
-
 	return 0;
 } 
