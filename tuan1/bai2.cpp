@@ -1,46 +1,28 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-class SoPhuc{
-	private:
-		int pt, pa;
-	public:
-		void nhap()
-		{	
-				cout<<"\nNhap phan thuc: ";
-				cin>>pt;
-				cout<<"\nNhap phan ao: ";
-				cin>>pa;
-		}
-		void in()
-		{
-			cout<<"\nA = "<<pt<<" + "<<pa<<" *j"<<endl;
-		}
-
-		//getter
-		int getPA()
-		{
-			return pa;
-		}
-		int getPT()
-		{
-			return pt;
-		}
-
-};
-
-int main(int argc, char *argv[])
+int main()
 {
-	SoPhuc a[2];
-	for(int i = 0; i < 2; i++)
+	int n;
+	do{
+	cout<<"Nhap vao so KW dien tieu thu :";
+	cin>>n;
+	cout<<"Nhap lai!"<<endl;
+	}while(n < 0);
+	if(n >= 0 && n <= 100)
 	{
-		a[i].nhap();
+		cout<<"Don gia 2000 dong/KW"<<endl;
 	}
-
-	cout<<"\nTong cua 2 so thuc vua nhap la: "
-		<<a[0].getPT() + a[1].getPT()
-		<<" + "<<a[0].getPA() + a[1].getPA()
-		<<" *j"<<endl;
-
-
+	if(n >= 101 && n <= 200)
+	{
+		cout<<"Don gia 2500 dong/KW"<<endl;
+	}
+	if(n >= 201 && n <= 300)
+	{
+		cout<<"Don gia 3000 dong/KW"<<endl;
+	}
+	if(n > 300)
+	{
+		cout<<"Don gia 5000 dong/KW"<<endl;
+	}
 	return 0;
-} 
+}

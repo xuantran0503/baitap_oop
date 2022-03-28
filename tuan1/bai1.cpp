@@ -1,71 +1,40 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-class HangHoa{
-	private:
-		char MaHang[8];
-		char TenHang[30];
-		int sl;
-		float dg, ThanhTien;
-
-	public:
-		void nhap()
-		{
-			cout<<"\nNhap ma hang: ";
-			cin.getline(MaHang, 8);
-			cout<<"\nNhap ten hang: ";
-			cin.getline(TenHang, 30);
-			cout<<"\nNhap so luong: ";
-			cin>>sl;
-			cout<<"\nNhap don gia: ";
-			cin>>dg;
-			fflush(stdin);
-		}
-
-		void tinhTien()
-		{
-			ThanhTien = sl*dg;
-		}
-
-		void xuatTT()
-		{
-			cout<<"Ma hang: "<<MaHang
-				<<"Ten hang: "<<TenHang
-				<<"So luong: "<<sl
-				<<"Don gia: "<<dg
-				<<"Thanh tien: "<<ThanhTien<<endl;
-		}
-
-		void in()
-		{
-			cout<<"\nDon gia lon hon 50 la: ";
-			if(dg > 50)
-			{
-				xuatTT();
-			}
-		}	
-};
-
-int main(int argc, char *argv[])
+int main()
 {
 	int n;
-	cout<<"\nNhap so luong hang hoa: ";
+	do{
+	cout<<"Nhap vao thu trong tuan :";
 	cin>>n;
-	HangHoa a[n];
-	fflush(stdin); //cin.ignore()
-	cout<<"\nNhap thong tin hang hoa: "<<endl;
-	for(int i = 0; i < n; i++)
-	{
-		cout<<"\nHang hoa thu "<<i+1<<endl;
-		a[i].nhap();
-	}
-
-	cout<<"\nXuat thong tin hang hoa: "<<endl;
-	for(int i = 0; i < n; i++)
-	{
-		cout<<"\nHang hoa thu "<<i+1<<endl;
-		a[i].in();
-	}
+		switch(n)
+		{
+			case 1: 
+				cout<<"Sunday"<<endl;
+				break;
+			case 2: 
+				cout<<"Monday"<<endl;
+				break;
+			case 3: 
+				cout<<"Tuesday"<<endl;
+				break;
+			case 4: 
+				cout<<"Wednesday"<<endl;
+				break;
+			case 5: 
+				cout<<"Friday"<<endl;
+				break;
+			case 6: 
+				cout<<"Saturday"<<endl;
+				break;
+			
+			case 7: 
+				cout<<"Sunday"<<endl;
+				break;
+			
+			default :
+				cout<<"Thu nhap sai! moi nhap lai ->"<<endl;
+				break;
+		}
+	}while(n <= 0 || n >=8);
 	return 0;
-} 
- 
-
+}
