@@ -4,10 +4,10 @@ class GV
 {
 	private:
 		char ht [30];
-		int t; 		//tuoi.
-		char bc[15];	//bang cap cao nhat duoc dao tao.
-		char cn [20]; //chuyen nganh.
-		float bl,lcb; //bac luong,luong co ban.
+		int t; 		
+		char bc[15];	
+		char cn [20]; 
+		float bl,lcb; 
 	public:
 		void nhap()
 		{
@@ -27,7 +27,7 @@ class GV
 		}
 		void Xuat()
 		{
-			//lcb=bl*610;
+	
 			cout<<"Ho ten:"<<ht
 				<<"\tTuoi:"<<t
 				<<"\tBang cap:"<<bc
@@ -63,7 +63,7 @@ int main()
 	for (int i=0;i<n;i++)
 	{
 		cout<<"\nGiao vien thu "<<i+1<<":";
-		//if (lcb<2000)
+	
 		{
 			a[i].in();
 		}
